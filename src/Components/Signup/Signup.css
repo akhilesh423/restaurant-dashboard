@@ -1,0 +1,35 @@
+.logo-container {
+    height: 40vh;
+    /* background-color: hsl(348, 38%, 59%); */
+    background-image: url("../Images/cover-img-2.jpg");
+    background-size: cover;
+    border-radius: 20px;
+}
+
+
+@media screen and (min-width:768px) {
+    .logo-container {
+        /* height: 40vh;
+        /* background-color: hsl(348, 38%, 59%); */
+        /* background-image: url("../Images/cover-img-2.jpg"); */
+        background-size: cover;
+        border-radius: 20px;
+    }
+
+}
+
+.form-container {
+    margin-top: -100px;
+    width: 80%;
+    max-width: 340px;
+}
+
+.card-margin {
+    margin-top: -63px;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}

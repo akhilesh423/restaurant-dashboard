@@ -1,0 +1,13 @@
+.icon-cards {
+    height: 65px;
+    width: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    margin-top: -27px;
+}
+
+.black-bg {
+    background-color: #3e3f3a;
+}

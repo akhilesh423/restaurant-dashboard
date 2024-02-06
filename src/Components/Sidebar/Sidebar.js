@@ -16,7 +16,7 @@ export default function Sidebar() {
 
     return (
         <aside>
-            <div style={backgroundColor} className="p-3 h-screen pt-4 pb-4 h-dvh hidden md:block w-full">
+            <div className="p-3 bg-gradient-to-r from-neutral-900 to-neutral-950 h-screen pt-4 pb-4 h-dvh hidden md:block w-full">
                 <h1 className="antialiased font-serif text-center text-3xl	text-white">Dashboard</h1>
                 <hr className="h-px w-full border-slate-200 mt-2" />
 

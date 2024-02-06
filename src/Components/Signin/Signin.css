@@ -1,0 +1,30 @@
+.sign-in-container {
+    background-image: url("../Images/starry-sky-gece-duvar-facebook-cover.jpg");
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.signin-form {
+    width: 80%;
+    max-width: 360px;
+
+}
+
+.card-margin {
+    margin-top: -63px;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#button {
+    background-color: rgb(59 130 246);
+}

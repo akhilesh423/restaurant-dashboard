@@ -1,11 +1,9 @@
-
-import Content from "./Components/Content/Content";
-
+import AdminRoutes from "./Components/AdminRoutes/AdminRoutes";
 
 function App() {
   return (
     <>
-      <Content />
+      <AdminRoutes />
     </>
   );
 }
