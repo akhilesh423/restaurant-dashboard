@@ -1,7 +1,11 @@
 import { useState } from "react";
 import Cookies from 'js-cookie';
 import { Link, Navigate } from "react-router-dom"
+
+
+
 import { useNavigate } from "react-router-dom";
+
 
 
 import "./Signup.css"
@@ -71,7 +75,22 @@ export default function Signup() {
                 body: JSON.stringify(formData),
             });
 
-            if (!response.ok) {
+            if (response.ok) {
+                const data = await response.json();
+                Cookies.set('token', data.token, { expires: 30 });
+
+                setFormData({
+                    email: '',
+                    password: '',
+                    name: ''
+                });
+                setErrorMsgs({
+                    userAlreadyExists: '',
+                    wrongPassword: '',
+                    wrongEmail: "",
+                });
+                navigate("/");
+            } else {
                 if (response.status === 401) {
                     const data = await response.json();
 
@@ -89,26 +108,10 @@ export default function Signup() {
                 } else {
                     throw new Error('Server error');
                 }
-            } else {
-                const data = await response.json();
-                Cookies.set('token', data.token, { expires: 30 });
-                setFormData({
-                    email: '',
-                    password: '',
-                    name: ''
-                });
-                setErrorMsgs({
-                    userAlreadyExists: '',
-                    wrongPassword: '',
-                    wrongEmail: "",
-
-                });
-                navigate("/");
             }
         } catch (error) {
             console.log(error)
         }
-
     }
 
     const handleInputData = (e) => {
@@ -145,7 +148,7 @@ export default function Signup() {
             </div>
 
             <div className="bg-white form-container shadow-lg rounded-xl p-4 m-auto pb-8">
-                <div className="bg-blue-500 rounded-xl w-full card-margin p-3 pt-3 pb-2 ">
+                <div id="card" className="bg-blue-500 rounded-xl w-full card-margin p-3 pt-3 pb-2 ">
                     <h1 className="text-center text-white font-sans text-2xl font-bold italic">Bling and Bliss</h1>
                     <h2 className=" text-center text-white font-sans text-base mt-3 font-normal">Enter your email and password to register</h2>
 

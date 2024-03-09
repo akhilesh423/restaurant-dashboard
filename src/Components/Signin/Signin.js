@@ -71,7 +71,12 @@ const Signin = () => {
                 }
             }
             else if (response.status === 404) {
-                setInvalidError(response.msg)
+                const data = await response.json();
+                setInvalidError(data.msg)
+            }
+            else {
+                const data = await response.json();
+                setInvalidError(data.msg)
             }
 
         } catch (error) {
@@ -132,7 +137,7 @@ const Signin = () => {
                     </label>
                     {errorMsgs.passwordError ? <p className="text-red-500 text-xs">{errorMsgs.passwordError}</p> : ""}
                     {invalidError && (
-                        <p className="text-red-500 text-sm">{invalidError}</p>
+                        <p className="text-red-500 text-sm mt-2">{invalidError}</p>
                     )}
 
                     <br />
