@@ -1,0 +1,243 @@
+.menu-wrapper {
+    min-height: 100vh;
+    /* overflow-y: auto; */
+    max-width: 100%;
+    margin-top: 40px;
+}
+
+.whole-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.food-ietms-main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #f9f9f9; */
+    background-color: #f5f5f5;
+    min-height: 100vh;
+    padding-bottom: 150px;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+
+}
+
+.menu-container {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+    /* Adjust min-width according to your requirement */
+    gap: 20px;
+    /* Adjust the gap between cards */
+
+
+    padding: 20px;
+    padding-top: 0px;
+}
+
+
+
+
+
+.customModal {
+    background: #ffffff;
+    max-width: 430px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.modal-btn {
+    background-color: #007bff;
+    border-radius: 8px;
+    height: 32px;
+    color: #ffffff;
+    width: 120px;
+    border: none;
+}
+
+@keyframes customEnterOverlayAnimation {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes customLeaveOverlayAnimation {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes customEnterModalAnimation {
+    0% {
+        transform: scale(0.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes customLeaveModalAnimation {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0.2);
+    }
+}
+
+.post-success-msg {
+    color: green;
+    font-size: 18px;
+    text-align: center;
+}
+
+.menu-item {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 200px;
+    padding: 10px;
+}
+
+.menu-item-image {
+    height: 100%;
+    width: 40%;
+    min-width: 180px;
+    border-radius: 8px;
+
+}
+
+.menu-details-container {
+    padding: 10px;
+    margin-left: 5px;
+}
+
+hr {
+    border: none;
+    /* Remove default border */
+    height: 1px;
+    /* Set the height of the line */
+    background-color: #dddddd;
+    /* Light grey color */
+    margin: 20px 0;
+    /* Set margin above and below the line */
+}
+
+.label-industry-standard {
+    font-weight: 600;
+    /* Apply bold font weight */
+    font-size: 1rem;
+    /* Set font size */
+    color: #333333;
+    /* Set text color */
+    margin-bottom: 5px;
+    /* Add bottom margin */
+    display: block;
+    /* Ensure label takes full width */
+}
+
+.modal-error-msg {
+    color: #ff0000;
+    /* Set text color to red */
+    font-size: 0.9rem;
+    /* Set font size */
+    margin-top: 2px;
+    /* Add top margin for separation */
+}
+
+
+.menu-item-name {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.menu-item-description {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    font-size: 0.9rem;
+    color: #555555;
+    text-overflow: ellipsis;
+}
+
+
+
+
+.menu-item-price {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.menu-item-buttons {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    width: 40%;
+    justify-content: space-between;
+}
+
+.menu-item-button {
+    font-size: 20px;
+    fill: black;
+    cursor: pointer;
+}
+
+.menu-item-button:hover {
+    background-color: #0056b3;
+
+}
+
+.category-list-container {
+    overflow-x: auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.category-list {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.category {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    color: #ffffff;
+    font-weight: 500;
+    background-color: #007bff;
+}
+
+.category-list-container::-webkit-scrollbar {
+    display: none;
+}
+
+.loader {
+    margin: 20px auto;
+}

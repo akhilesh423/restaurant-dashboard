@@ -11,3 +11,10 @@
 .black-bg {
     background-color: #3e3f3a;
 }
+
+.horizontal-line {
+    border-top: 1px solid #ccc; /* Line color */
+    margin-top: 20px; /* Adjust as needed */
+    margin-bottom: 20px; /* Adjust as needed */
+  }
+  

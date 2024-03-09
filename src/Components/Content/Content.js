@@ -1,9 +1,9 @@
-
-import Navbar from "../Navbar/Navbar.js"
-import Sidebar from "../Sidebar/Sidebar.js"
-import Orders from "../Orders/Orders.js"
-
-import "./Content.css"
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import Navbar from "../Navbar/Navbar.js";
+import Orders from "../Orders/Orders.js";
+import "./Content.css";
+import Cookies from "js-cookie";
 
 
 export default function Content() {
@@ -15,19 +15,25 @@ export default function Content() {
 
     // }
 
+    const navigate = useNavigate();
 
+    useEffect(() => {
+        // Check if the token is present in cookies
+        const token = Cookies.get("token");
+        if (!token) {
+            // If token is not present, redirect to sign-in page
+            navigate("/signin");
+        }
+    }, []);
 
 
     return (
         <div className="h-screen flex flex-row bg-slate-50">
-            <div className="hidden md:block w-1/5 h-screen">
-                <Sidebar />
-            </div>
             <div className="w-full overflow-y-auto h-screen">
                 <Navbar />
-                <div className="">
-                    <div className="grid grid-cols-4 gap-4 p-2">
-                        <div className=" bg-white p-3 rounded-lg drop-shadow-lg">
+                <div className="p-3">
+                    <div className="grid grid-cols-1 md:grid-cols-4 gap-4 p-2 mt-3">
+                        <div className=" bg-white p-3 rounded-lg drop-shadow-lg min-h-32">
                             <div className="flex justify-between">
                                 <div className="icon-cards bg-gradient-to-r from-neutral-800 to-neutral-950">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 fill-white">
@@ -36,6 +42,7 @@ export default function Content() {
                                 </div>
                                 <h1 className="text-center">Total Revenue</h1>
                             </div>
+                            <p className="text-right text-2xl font-bold mt-4">₹15000</p>
                         </div>
                         <div className="p-3 bg-white rounded-lg drop-shadow-lg">
                             <div className="flex justify-between">
@@ -46,7 +53,7 @@ export default function Content() {
                                 </div>
                                 <h1 className="text-center">Total Orders</h1>
                             </div>
-
+                            <p className="text-right text-2xl font-bold mt-4">25</p>
                         </div>
                         <div className="p-3 bg-white rounded-lg drop-shadow-lg ">
                             <div className="flex justify-between">
@@ -58,7 +65,7 @@ export default function Content() {
                                 <h1 className="text-center">Today Revenue</h1>
 
                             </div>
-
+                            <p className="text-right text-2xl font-bold mt-4">₹5000</p>
                         </div>
                         <div className=" p-3 bg-white rounded-lg drop-shadow-lg">
                             <div className="flex justify-between">
@@ -70,10 +77,13 @@ export default function Content() {
                                 <h1 className="text-center">Today Orders</h1>
 
                             </div>
+                            <p className="text-right text-2xl font-bold mt-4">4</p>
 
                         </div>
                     </div>
-                    <h1 className="font-serif text-2xl mb-2 font-bold p-2">Orders 20</h1>
+                    <hr className="horizontal-line" />
+
+
                     <div className="p-2 overflow-y-auto">
 
                         <Orders />
