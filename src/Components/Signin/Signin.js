@@ -70,6 +70,9 @@ const Signin = () => {
 
                 }
             }
+            else if (response.status === 404) {
+                setInvalidError(response.msg)
+            }
 
         } catch (error) {
             console.error('Error signing in:', error);
