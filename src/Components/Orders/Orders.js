@@ -22,7 +22,7 @@ export default function Orders() {
             navigate("/signin");
         } else {
             fetchPlacedOrders();
-            const intervalId = setInterval(fetchPlacedOrders, 30000);
+            const intervalId = setInterval(fetchPlacedOrders, 60000);
             return () => clearInterval(intervalId);
         }
     }, [page]);

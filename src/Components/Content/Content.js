@@ -28,7 +28,7 @@ export default function Content() {
             navigate("/signin");
         } else {
             fetchAnalytics();
-            const intervalId = setInterval(fetchAnalytics, 30000);
+            const intervalId = setInterval(fetchAnalytics, 600000);
             return () => clearInterval(intervalId);
         }
     }, []);
