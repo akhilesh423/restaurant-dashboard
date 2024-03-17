@@ -13,8 +13,30 @@
 }
 
 .horizontal-line {
-    border-top: 1px solid #ccc; /* Line color */
-    margin-top: 20px; /* Adjust as needed */
-    margin-bottom: 20px; /* Adjust as needed */
-  }
-  
+    border-top: 1px solid #ccc;
+    /* Line color */
+    margin-top: 20px;
+    /* Adjust as needed */
+    margin-bottom: 20px;
+    /* Adjust as needed */
+}
+
+.icons {
+    font-size: 22px;
+    color: white;
+    font-weight: bold;
+}
+
+.title {
+    font-family: "Roboto", sans-serif;
+    color: #333333;
+    /* Adjusted color */
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    font-size: 16px;
+}
+
+.revenue {
+    color: #000000;
+    font-family: "Roboto", sans-serif;
+}

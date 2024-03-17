@@ -30,6 +30,12 @@
     padding: 10px;
 }
 
+
+h1 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+}
+
 /* Container styling */
 .search-container {
     display: flex;

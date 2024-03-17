@@ -1,0 +1,222 @@
+.placed-order-head {
+    font-family: "Roboto", sans-serif;
+    color: #222222;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    font-size: 16px;
+
+}
+
+.placed-items-para {
+    font-family: "Roboto", sans-serif;
+    color: #555555;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.acknowledge-text {
+    color: #555555;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    width: 100%;
+
+}
+
+.line {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin-top: 1rem;
+}
+
+.new-order {
+    border-left: 5px solid #4CAF50;
+}
+
+.served-order {
+    border-left: 5px solid #666666;
+}
+
+
+.acknowledge-button {
+    background-color: #4CAF50;
+    font-family: "Roboto", sans-serif;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.acknowledge-button:hover {
+    background-color: #45a049;
+    /* Darker green */
+}
+
+.acknowledge-button-disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+    /* You can adjust the opacity as needed */
+}
+
+
+
+.veg-icon,
+.non-veg-icon {
+    display: inline-block;
+    width: 10px;
+    /* Adjust size as needed */
+    height: 10px;
+    /* Adjust size as needed */
+    border: 1px solid;
+    /* Border color will be overridden based on the class */
+    margin-right: 5px;
+    /* Add some spacing between icon and food item name */
+    position: relative;
+    /* Positioning for the dot */
+}
+
+.veg-icon::after {
+    content: "";
+    /* Create empty content */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 6px;
+    /* Adjust size as needed */
+    height: 6px;
+    /* Adjust size as needed */
+    background-color: green;
+    /* Green dot */
+    border-radius: 50%;
+    /* Circular shape */
+}
+
+.non-veg-icon::after {
+    content: "";
+    /* Create empty content */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 6px;
+    /* Adjust size as needed */
+    height: 6px;
+    /* Adjust size as needed */
+    background-color: maroon;
+    /* Green dot */
+    border-radius: 50%;
+    /* Circular shape */
+}
+
+.veg-icon {
+    border-color: green;
+    /* Green border for veg icon */
+}
+
+.non-veg-icon {
+    border-color: maroon;
+    /* Red border for non-veg icon */
+}
+
+/* This CSS assumes you're using Tailwind CSS for styling */
+/* You can adjust the classes according to your design requirements */
+
+/* Border-collapse table */
+.border-collapse {
+    border-collapse: collapse;
+}
+
+/* Table header */
+table th {
+    font-weight: bold;
+    text-align: left;
+}
+
+/* Table row */
+table tr {
+    background-color: #fff;
+}
+
+/* Table cell */
+table td,
+table th {
+    border: 1px solid #ddd;
+    /* Light grey border */
+    padding: 8px;
+}
+
+
+.pagination {
+    display: flex;
+    justify-content: end;
+
+}
+
+.pagination button {
+    padding: 8px 16px;
+    margin: 0 4px;
+    border: none;
+    fill: #222222;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+
+
+
+
+.placed-order-head-description {
+    max-width: 150px;
+    /* Adjust as needed */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.page {
+    font-family: "Roboto", sans-serif;
+    color: #222222;
+    font-weight: bold;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.pagination button:hover {
+    background-color: #0056b3;
+}
+
+.pagination button:disabled {
+    background-color: #ced4da;
+    cursor: not-allowed;
+}
+
+.loader {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #007bff;
+    /* Change the color of the spinner */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 0.8s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
