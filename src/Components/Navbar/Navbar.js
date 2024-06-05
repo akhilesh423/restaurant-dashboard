@@ -23,7 +23,7 @@ export default function Navbar() {
     return (
         <nav>
             <div className="navbar">
-                <h1 className="logo-name">Bling and Bliss</h1>
+                <h1 className="logo-name">Akhil's Kitchen</h1>
 
                 <ul className="flex">
                     <Link to="/">

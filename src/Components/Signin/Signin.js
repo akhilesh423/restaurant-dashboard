@@ -118,7 +118,7 @@ const Signin = () => {
         <div className="sign-in-container">
             <div className="bg-white shadow-lg rounded-xl p-4 pb-8 signin-form">
                 <div className="bg-blue-500 rounded-xl w-full card-margin p-3 pt-3 pb-2 ">
-                    <h1 className="text-center text-white font-sans text-2xl font-bold	italic">Bling and Bliss</h1>
+                    <h1 className="text-center text-white font-sans text-2xl font-bold	italic">Akhil's Kitchen</h1>
                     <h2 className=" text-center text-white font-sans text-base mt-3 font-normal">Enter your email and password to login</h2>
                 </div>
                 <form onSubmit={handleSubmit}>

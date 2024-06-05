@@ -149,7 +149,7 @@ export default function Signup() {
 
             <div className="bg-white form-container shadow-lg rounded-xl p-4 m-auto pb-8">
                 <div id="card" className="bg-blue-500 rounded-xl w-full card-margin p-3 pt-3 pb-2 ">
-                    <h1 className="text-center text-white font-sans text-2xl font-bold italic">Bling and Bliss</h1>
+                    <h1 className="text-center text-white font-sans text-2xl font-bold italic">Akhil's Kitchen</h1>
                     <h2 className=" text-center text-white font-sans text-base mt-3 font-normal">Enter your email and password to register</h2>
 
                 </div>
